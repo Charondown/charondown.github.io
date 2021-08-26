@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>方山子</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2021-08-04T15:13:24.036Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>方山子</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2021/08/04/%E9%9A%8F%E6%83%B32/"/>
+    <id>http://example.com/2021/08/04/%E9%9A%8F%E6%83%B32/</id>
+    <published>2021-08-04T15:13:24.036Z</published>
+    <updated>2021-08-04T15:13:24.036Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>随想</title>
+    <link href="http://example.com/2021/07/22/%E9%9A%8F%E6%83%B3/"/>
+    <id>http://example.com/2021/07/22/%E9%9A%8F%E6%83%B3/</id>
+    <published>2021-07-22T06:12:35.932Z</published>
+    <updated>2021-07-27T05:48:35.495Z</updated>
+    
+    <content type="html"><![CDATA[<h1>学习是一场需要不断克服自己内心不同欲望的修行。</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1&gt;学习是一场需要不断克服自己内心不同欲望的修行。&lt;/h1&gt;</summary>
+      
+    
+    
+    
+    
+    <category term="杂谈" scheme="http://example.com/tags/%E6%9D%82%E8%B0%88/"/>
+    
+  </entry>
+  
+</feed>

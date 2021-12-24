@@ -43,7 +43,7 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/9b12caee962d4836807fa13ab237b316.png?type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_17,color_FFFFFF,t_70,g_se,x_16#pic_center">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/59c142a64c3b4d569b2df836142c337b.png?,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_14,color_FFFFFF,t_70,g_se,x_16#pic_center">
 <meta property="article:published_time" content="2021-12-22T11:31:03.434Z">
-<meta property="article:modified_time" content="2021-12-24T00:28:52.419Z">
+<meta property="article:modified_time" content="2021-12-24T00:36:00.782Z">
 <meta property="article:author" content="方山子">
 <meta property="article:tag" content="计网">
 <meta name="twitter:card" content="summary">
@@ -217,15 +217,15 @@
       
         
           
-            <h2 id="直接连接两台-PC-构建-LAN"><a href="#直接连接两台-PC-构建-LAN" class="headerlink" title="直接连接两台 PC 构建 LAN"></a>直接连接两台 PC 构建 LAN</h2><p>将两台 PC 直接连接构成一个网络。注意：直接连接需使用交叉线。<br>先选择两台PC，然后连接起来，如图所示<br><img src="https://img-blog.csdnimg.cn/0622940d7a2647868f9feda789573988.png?type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_19,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"><br>接着分别对两台PC设置IP地址。设置PC6的IP地址：192.168.0.7，PC7的IP地址：192.168.0.8.设置好ip地址之后，尝试ping一下，能ping通则成功。<br>先点击PC6,然后选择command</p>
+            <h2 id="直接连接两台-PC-构建-LAN"><a href="#直接连接两台-PC-构建-LAN" class="headerlink" title="直接连接两台 PC 构建 LAN"></a>直接连接两台 PC 构建 LAN</h2><p>将两台 PC 直接连接构成一个网络。注意：直接连接需使用交叉线。<br>先选择两台PC，然后连接起来，如图所示<br><img src="https://img-blog.csdnimg.cn/0622940d7a2647868f9feda789573988.png?type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_19,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"><br>接着分别对两台PC设置IP地址。设置PC6的IP地址：<code>192.168.0.7</code>，PC7的IP地址：<code>192.168.0.8</code>.设置好ip地址之后，尝试<code>ping</code>一下，能<code>ping</code>通则成功。<br>先点击PC6,然后选择<code>command</code></p>
 <span id="more"></span>
 <p><img src="https://img-blog.csdnimg.cn/1e756ea6fb804bf2a5b32573b9154b24.png?type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/27703864d4d7437d9908c0ceb305d32c.png?type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/275087f769304d2095a39a80bdaee3cd.png?type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"><br>说明网络连接配置成功</p>
 <h2 id="用交换机构建-LAN"><a href="#用交换机构建-LAN" class="headerlink" title="用交换机构建 LAN"></a>用交换机构建 LAN</h2><p>构建如下拓扑结构的局域网<br><img src="https://img-blog.csdnimg.cn/e6e5932f18644a578acc31d1272ac03b.png?type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"><br>各PC的基本网络配置如下表<br>机器名 | IP      | 子网掩码<br>——– | —– | ——<br>PC0  | 192.168.1.1|255.255.255.0<br>PC1  | 192.168.1.2    |255.255.255.0<br>PC2  | 192.168.2.1|255.255.255.0<br>PC3  | 192.168.2.2|255.255.255.0</p>
 <p>首先按照上图构建拓扑局域网，构建结果如下所示:<br><img src="https://img-blog.csdnimg.cn/3f1acb549f884420bc806f5580525338.png?type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"><br>然后点击每一个PC端设置IP地址。</p>
-<h3 id="✎-问题一"><a href="#✎-问题一" class="headerlink" title="✎ 问题一"></a>✎ 问题一</h3><p>验证PC0 能否 ping 通 PC1、PC2、PC3<br><img src="https://img-blog.csdnimg.cn/151547b433d947049c2216546d3417b8.png?type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"><br>从上面的结果可以看到，PC0可以ping通PC1，但是不能ping通PC2和PC3。即使是PC终端可以ping通和它在同一个交换机下的其他PC终端</p>
+<h3 id="✎-问题一"><a href="#✎-问题一" class="headerlink" title="✎ 问题一"></a>✎ 问题一</h3><p>验证PC0 能否<code>ping</code> 通 PC1、PC2、PC3<br><img src="https://img-blog.csdnimg.cn/151547b433d947049c2216546d3417b8.png?type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"><br>从上面的结果可以看到，PC0可以ping通PC1，但是不能ping通PC2和PC3。即使是PC终端可以ping通和它在同一个交换机下的其他PC终端</p>
 <h3 id="✎-问题二"><a href="#✎-问题二" class="headerlink" title="✎ 问题二"></a>✎ 问题二</h3><p>PC3 能否 ping 通 PC0、PC1、PC2 ，为什么？</p>
-<p>PC3不能ping通PC0和PC1，但是可以ping通PC2，因为PC1和PC0不和PC3在同一个交换机下，而PC2和PC3在同一个交换机下面。结果如图所示<br><img src="https://img-blog.csdnimg.cn/8475732ebc634edb8b6b8b4c39b1440b.png?type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
-<h3 id="✎-问题三"><a href="#✎-问题三" class="headerlink" title="✎ 问题三"></a>✎ 问题三</h3><p>将 4 台 PC 的掩码都改为 255.255.0.0 ，它们相互能 ping 通吗？为什么？<br>结果如下<br><img src="https://img-blog.csdnimg.cn/480c24e2848b424fb40dd398f46e0926.png?type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
+<p>PC3不能<code>ping</code>通PC0和PC1，但是可以<code>ping</code>通PC2，因为PC1和PC0不和PC3在同一个交换机下，而PC2和PC3在同一个交换机下面。结果如图所示<br><img src="https://img-blog.csdnimg.cn/8475732ebc634edb8b6b8b4c39b1440b.png?type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
+<h3 id="✎-问题三"><a href="#✎-问题三" class="headerlink" title="✎ 问题三"></a>✎ 问题三</h3><p>将 4 台 PC 的掩码都改为<code>255.255.0.0</code>，它们相互能 <code>ping </code>通吗？为什么？<br>结果如下<br><img src="https://img-blog.csdnimg.cn/480c24e2848b424fb40dd398f46e0926.png?type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
 <h3 id="✎-问题四"><a href="#✎-问题四" class="headerlink" title="✎ 问题四"></a>✎ 问题四</h3><p>使用二层交换机连接的网络需要配置网关吗？为什么？</p>
 <p>需要配置网关。因为只有设置了网关，在发送数据的时候，交换机才会知道如何转发数据包，即是发送到对方网关。</p>
 <h3 id="✎-试一试"><a href="#✎-试一试" class="headerlink" title="✎ 试一试"></a>✎ 试一试</h3><p>集线器 Hub 是工作在物理层的多接口设备，它与交换机的区别有以下两点：</p>
@@ -730,11 +730,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂谈</a>
+                <a href="javascript:void(0)" class="js-tag color3">计网</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">计网</a>
+                <a href="javascript:void(0)" class="js-tag color3">杂谈</a>
               </li>
             
             <div class="clearfix"></div>

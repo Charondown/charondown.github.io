@@ -34,7 +34,7 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/dd81a3fa19154a9cb5f350c6b857a2c9.png?,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/e370f6a0795a47648cf9593ce0a4de4d.png?,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center">
 <meta property="article:published_time" content="2021-12-22T11:02:20.935Z">
-<meta property="article:modified_time" content="2021-12-23T08:08:08.153Z">
+<meta property="article:modified_time" content="2021-12-24T00:41:44.751Z">
 <meta property="article:author" content="方山子">
 <meta property="article:tag" content="计网">
 <meta name="twitter:card" content="summary">
@@ -209,67 +209,67 @@
         
           
             <h2 id="ipconfig"><a href="#ipconfig" class="headerlink" title="ipconfig"></a>ipconfig</h2><h3 id="实作一"><a href="#实作一" class="headerlink" title="实作一"></a>实作一</h3><blockquote>
-<p>ipconfig 是微软操作系统的计算机上用来控制网络连接的一个命令行工具。它的主要用来显示当前网络连接的配置信息（/all 参数）</p>
+<p>ipconfig 是微软操作系统的计算机上用来控制网络连接的一个命令行工具。它的主要用来显示当前网络连接的配置信息（<code>/all</code> 参数）</p>
 </blockquote>
 <p><img src="https://img-blog.csdnimg.cn/4a602aadf1d34d06bc36c8304f299eaf.png?,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
 <span id="more"></span>
 
 <h3 id="✎-问题"><a href="#✎-问题" class="headerlink" title="✎ 问题"></a>✎ 问题</h3><p>你的计算机和旁边的计算机是否处于同一子网，为什么？</p>
-<p>答：是。子网掩码是用来判断任意两台计算机的IP地址是否属于同一子网络的根据。<br>子网掩码与IP地址结构相同，是32位二进制数，其中网络号部分全为“1”和主机号部分全为“0”。利用子网掩码可以判断两台主机是否中同一子网中。若两台主机的IP地址分别与它们的子网掩码相“与”后的结果相同，则说明这两台主机在同一子网中。</p>
+<p>答：是。子网掩码是用来判断任意两台计算机的IP地址是否属于同一子网络的根据。<br>子网掩码与IP地址结构相同，是32位二进制数，其中网络号部分全为“<code>1</code>”和主机号部分全为“<code>0</code>”。利用子网掩码可以判断两台主机是否中同一子网中。若两台主机的IP地址分别与它们的子网掩码相“与”后的结果相同，则说明这两台主机在同一子网中。</p>
 <h2 id="ping"><a href="#ping" class="headerlink" title="ping"></a>ping</h2><blockquote>
-<p>PING （Packet Internet Groper），因特网包探索器，用于测试网络连接量的程序 。ping 是工作在 TCP/IP 网络体系结构中应用层的一个服务命令， 主要是向特定的目的主机发送 ICMP（Internet Control Message Protocol 因特网报文控制协议）Echo 请求报文，测试目的站是否可达及了解其有关状态。</p>
+<p>PING （Packet Internet Groper），因特网包探索器，用于测试网络连接量的程序 。<code>ping</code> 是工作在 <code>TCP/IP</code> 网络体系结构中应用层的一个服务命令， 主要是向特定的目的主机发送 <code>ICMP</code>（Internet Control Message Protocol 因特网报文控制协议）Echo 请求报文，测试目的站是否可达及了解其有关状态。</p>
 </blockquote>
-<h3 id="实作一-1"><a href="#实作一-1" class="headerlink" title="实作一"></a>实作一</h3><p><img src="https://img-blog.csdnimg.cn/065765450b4e44cfbfa7ac8cba95499b.png?,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"><br>一共接收到了四个回复，都是 32 个字节长度的数据，与对方主机往返一次花费了 128ms ，一般情况下 TTL 都是设为 128。</p>
-<p><strong>回显的结果包括：字节数，反应时间，TTL（生存时间）<br>TTL是 Time To Live的缩写，该字段指定IP包被路由器丢弃之前允许通过的最大网段数量。TTL是IPv4报头的一个8 bit字段。</strong></p>
-<h3 id="实作二"><a href="#实作二" class="headerlink" title="实作二"></a>实作二</h3><p>使用 ping/? 命令了解该命令的各种选项并实际使用。<br><img src="https://img-blog.csdnimg.cn/c2eb89c1899c4ac6b4a5af48866b2693.png?,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
-<h3 id="✎问题"><a href="#✎问题" class="headerlink" title="✎问题"></a>✎问题</h3><p>假设你不能 ping 通某计算机或 IP，但你确定该计算机和你之间的网络是连通的，那么可能的原因是什么？该如何处理能保证 ping 通？</p>
+<h3 id="实作一-1"><a href="#实作一-1" class="headerlink" title="实作一"></a>实作一</h3><p><img src="https://img-blog.csdnimg.cn/065765450b4e44cfbfa7ac8cba95499b.png?,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"><br>一共接收到了四个回复，都是 32 个字节长度的数据，与对方主机往返一次花费了 128ms ，一般情况下 <code>TTL</code> 都是设为 128。</p>
+<p><strong>回显的结果包括：字节数，反应时间，TTL（生存时间）<br><code>TTL</code>是 Time To Live的缩写，该字段指定IP包被路由器丢弃之前允许通过的最大网段数量。<code>TTL</code>是<code>IPv4</code>报头的一个8 bit字段。</strong></p>
+<h3 id="实作二"><a href="#实作二" class="headerlink" title="实作二"></a>实作二</h3><p>使用 <code>ping/?</code> 命令了解该命令的各种选项并实际使用。<br><img src="https://img-blog.csdnimg.cn/c2eb89c1899c4ac6b4a5af48866b2693.png?,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
+<h3 id="✎问题"><a href="#✎问题" class="headerlink" title="✎问题"></a>✎问题</h3><p>假设你不能 <code>ping </code>通某计算机或 IP，但你确定该计算机和你之间的网络是连通的，那么可能的原因是什么？该如何处理能保证 <code>ping</code> 通？</p>
 <p>答：可能是自己的网络出现故障不能访问某计算机，我们一般可采用由近及远的连通性测试来确定问题所在。</p>
 <h2 id="tracert"><a href="#tracert" class="headerlink" title="tracert"></a>tracert</h2><blockquote>
 <p>TRACERT (Trace Route 的组合缩写)，也称为路由追踪，该命令行程序可用于跟踪 Internet 协议 （IP） 数据包传送到目标地址时经过的路径。</p>
 </blockquote>
-<h3 id="实作一-2"><a href="#实作一-2" class="headerlink" title="实作一"></a>实作一</h3><p>要了解到某计算机如 <a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a> 中间经过了哪些节点（路由器）及其它状态，可使用 tracert <a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a> 命令，查看反馈的信息，了解节点的个数。<br><img src="https://img-blog.csdnimg.cn/2261921fb9cf4508bcae5f2b9fe2de27.png?,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"><br>可通过网站 <a target="_blank" rel="noopener" href="http://ip.cn/">http://ip.cn</a> 查看这些节点位于何处，是哪个公司的，大致清楚本机到百度服务器之间的路径。<br><img src="https://img-blog.csdnimg.cn/fe6e02aad4c54ce8ada2d2685fa8caf0.png#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/3dbc2ffa990d4fea8f1c826fb87dac21.png#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2e4f06e9988e40cca15956a19c29c351.png#pic_center" alt="在这里插入图片描述"></p>
-<h3 id="实作二-1"><a href="#实作二-1" class="headerlink" title="实作二"></a>实作二</h3><p>ping.pe 这个网站可以探测从全球主要的 ISP 到某站点如 <a target="_blank" rel="noopener" href="https://qige.io/">https://qige.io</a> 的线路状态，当然也包括各线路到该主机的路由情况。请使用浏览器访问 <a target="_blank" rel="noopener" href="http://ping.pe/qige.io">http://ping.pe/qige.io</a> 进行了解。<br><img src="https://img-blog.csdnimg.cn/795296789ca44802baada321d65a6562.png?,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
+<h3 id="实作一-2"><a href="#实作一-2" class="headerlink" title="实作一"></a>实作一</h3><p>要了解到某计算机如 <code>www.baidu.com </code>中间经过了哪些节点（路由器）及其它状态，可使用 tracert<code> www.baidu.com</code> 命令，查看反馈的信息，了解节点的个数。<br><img src="https://img-blog.csdnimg.cn/2261921fb9cf4508bcae5f2b9fe2de27.png?,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"><br>可通过网站 <a target="_blank" rel="noopener" href="http://ip.cn/">http://ip.cn</a> 查看这些节点位于何处，是哪个公司的，大致清楚本机到百度服务器之间的路径。<br><img src="https://img-blog.csdnimg.cn/fe6e02aad4c54ce8ada2d2685fa8caf0.png#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/3dbc2ffa990d4fea8f1c826fb87dac21.png#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2e4f06e9988e40cca15956a19c29c351.png#pic_center" alt="在这里插入图片描述"></p>
+<h3 id="实作二-1"><a href="#实作二-1" class="headerlink" title="实作二"></a>实作二</h3><p><code>ping</code>.pe 这个网站可以探测从全球主要的 ISP 到某站点如 <code>https://qige.io</code> 的线路状态，当然也包括各线路到该主机的路由情况。请使用浏览器访问<code> http://ping.pe/qige.io</code> 进行了解。<br><img src="https://img-blog.csdnimg.cn/795296789ca44802baada321d65a6562.png?,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
 <h3 id="✎问题一"><a href="#✎问题一" class="headerlink" title="✎问题一"></a>✎问题一</h3><p>tracert 能告诉我们路径上的节点以及大致的延迟等信息，那么它背后的原理是什么？本问题可结合第二部分的 Wireshark 实验进行验证。</p>
-<p>答：通过向目标发送不同IP生存时间 (TTL) 值的“Internet控制消息协议(ICMP)”回应数据包，Tracert诊断程序确定到目标所采取的路由。要求路径上的每个路由器在转发数据包之前至少将数据包上的 TTL 递减1。数据包上的 TTL 减为 0 时，路由器应该将“ICMP 已超时”的消息发回源系统。 Tracert 先发送 TTL 为 1的回应数据包，并在随后的每次发送过程将TTL递增 1，直到目标响应或 TTL 达到最大值，从而确定路由。通过检查中间路由器发回的“ICMP已超时”的消息确定路由。某些路由器不经询问直接丢弃 TTL 过期的数据包，这在 Tracert 实用程序中看不到。</p>
+<p>答：通过向目标发送不同IP生存时间 (<code>TTL</code>) 值的“Internet控制消息协议(<code>ICMP</code>)”回应数据包，Tracert诊断程序确定到目标所采取的路由。要求路径上的每个路由器在转发数据包之前至少将数据包上的 <code>TTL</code> 递减1。数据包上的 <code>TTL</code> 减为 <code>0 </code>时，路由器应该将“<code>ICMP</code> 已超时”的消息发回源系统。 Tracert 先发送 <code>TTL</code> 为 <code>1</code>的回应数据包，并在随后的每次发送过程将TTL递增<code> 1</code>，直到目标响应或 <code>TTL</code> 达到最大值，从而确定路由。通过检查中间路由器发回的“<code>ICMP</code>已超时”的消息确定路由。某些路由器不经询问直接丢弃 <code>TTL</code> 过期的数据包，这在 Tracert 实用程序中看不到。</p>
 <h3 id="✎问题二"><a href="#✎问题二" class="headerlink" title="✎问题二"></a>✎问题二</h3><p>在以上两个实作中，如果你留意路径中的节点，你会发现无论是访问百度还是棋歌教学网，路径中的第一跳都是相同的，甚至你应该发现似乎前几个节点都是相同的，你的解释是什么？</p>
 <p>答：主机的测试数据会送到网关，然后才能访问外网，有多个网关的情况下，就会出现前几个结点都是相同的。</p>
 <h3 id="✎问题三"><a href="#✎问题三" class="headerlink" title="✎问题三"></a>✎问题三</h3><p>在追踪过程中，你可能会看到路径中某些节点显示为 * 号，这是发生了什么？</p>
 <p>答：没有出现具体的信息反馈，请求超时</p>
-<h3 id="📬-秘籍"><a href="#📬-秘籍" class="headerlink" title="📬 秘籍"></a>📬 秘籍</h3><p>如果你使用 Linux 系统，那么应该用过其下的 My Trace Route 即 mtr 命令。<br>该命令的速度比 Windows 平台下的 tracert 快多了。为此，有人也开发了 Windows下的 命令，你可以试一试。其次还可以试试<br>另外，提供一个全球地图，可视化的显示追踪路径也值得你前往（因为使用了 Google 地图，需要科学上网）</p>
+<h3 id="📬-秘籍"><a href="#📬-秘籍" class="headerlink" title="📬 秘籍"></a>📬 秘籍</h3><p>如果你使用 Linux 系统，那么应该用过其下的 <code>My Trace Route</code> 即 <code>mtr </code>命令。<br>该命令的速度比 Windows 平台下的<code> tracert</code> 快多了。为此，有人也开发了 Windows下的 命令，你可以试一试。其次还可以试试<br>另外，提供一个全球地图，可视化的显示追踪路径也值得你前往（因为使用了 Google 地图，需要科学上网）</p>
 <h2 id="ARP"><a href="#ARP" class="headerlink" title="ARP"></a>ARP</h2><blockquote>
-<p>ARP（Address Resolution Protocol）即地址解析协议，是用于根据给定网络层地址即 IP 地址，查找并得到其对应的数据链路层地址即 MAC地址的协议。 ARP 协议定义在 1982 年的 RFC 826</p>
+<p>ARP（Address Resolution Protocol）即地址解析协议，是用于根据给定网络层地址即 IP 地址，查找并得到其对应的数据链路层地址即 MAC地址的协议。 <code>ARP</code> 协议定义在 1982 年的 RFC 826</p>
 </blockquote>
-<h3 id="实作一-3"><a href="#实作一-3" class="headerlink" title="实作一"></a>实作一</h3><p>运行 arp -a 命令查看当前的 arp 缓存， 请留意缓存了些什么<br><img src="https://img-blog.csdnimg.cn/a666c0fed59e44a8915a4a4c80d61717.png?,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_18,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
+<h3 id="实作一-3"><a href="#实作一-3" class="headerlink" title="实作一"></a>实作一</h3><p>运行 <code>arp -a</code> 命令查看当前的 arp 缓存， 请留意缓存了些什么<br><img src="https://img-blog.csdnimg.cn/a666c0fed59e44a8915a4a4c80d61717.png?,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_18,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
 <h3 id="实作二-2"><a href="#实作二-2" class="headerlink" title="实作二"></a>实作二</h3><p>请使用 arp /? 命令了解该命令的各种选项。<br><img src="https://img-blog.csdnimg.cn/837db25b4fea4d8e82a058d0684a7ba0.png?,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_19,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
 <h3 id="✎问题-1"><a href="#✎问题-1" class="headerlink" title="✎问题"></a>✎问题</h3><p>在实作三中，为何缓存中常常有网关的信息？</p>
-<p>答：因为在对外传输数据的时候，会将经过的网关信息存储在缓存中，方便下次使用。<br>我们将网关或其它计算机的 arp 信息设置为静态有什么优缺点？<br>优点：利于管理，同时将 IP-MAC 绑定可以有效的防治 ARP 欺骗，并且可以免除用户进行身份认证的繁琐操作；<br>缺点：不利于维护 arp 列表，维护起来麻烦，倘若有人冒充其中一个 IP ，对用户的安全会造成极大的隐患。</p>
+<p>答：因为在对外传输数据的时候，会将经过的网关信息存储在缓存中，方便下次使用。<br>我们将网关或其它计算机的 <code>arp</code> 信息设置为静态有什么优缺点？<br>优点：利于管理，同时将 <code>IP-MAC</code> 绑定可以有效的防治 <code>ARP </code>欺骗，并且可以免除用户进行身份认证的繁琐操作；<br>缺点：不利于维护 <code>arp </code>列表，维护起来麻烦，倘若有人冒充其中一个 IP ，对用户的安全会造成极大的隐患。</p>
 <h2 id="DHCP"><a href="#DHCP" class="headerlink" title="DHCP"></a>DHCP</h2><blockquote>
 <p>DHCP（Dynamic Host Configuration Protocol）即动态主机配置协议，是一个用于 IP 网络的网络协议，位于 OSI 模型的应用层，使用 UDP 协议工作，主要有两个用途：<br>1、用于内部网或网络服务供应商自动分配 IP 地址给用户<br>2、用于内部网管理员对所有电脑作中央管理<br>简单的说，DHCP 可以让计算机自动获取/释放网络配置</p>
 </blockquote>
-<h3 id="实作一-4"><a href="#实作一-4" class="headerlink" title="实作一"></a>实作一</h3><p>一般地，我们自动获取的网络配置信息包括：IP 地址、子网掩码、网关 IP 以及 DNS 服务器 IP 等。使用 ipconfig/release 命令释放自动获取的网络配置，并用 ipconfig/renew 命令重新获取，了解 DHCP 工作过程和原理</p>
+<h3 id="实作一-4"><a href="#实作一-4" class="headerlink" title="实作一"></a>实作一</h3><p>一般地，我们自动获取的网络配置信息包括：IP 地址、子网掩码、网关 IP 以及 DNS 服务器 IP 等。使用 <code>ipconfig/release</code> 命令释放自动获取的网络配置，并用 <code>ipconfig/renew </code>命令重新获取，了解 DHCP 工作过程和原理</p>
 <p><img src="https://img-blog.csdnimg.cn/878a5576f6814f01b49e5e4fd974267c.png?,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/c49b5ab54d514c90ad24c101398cb6fb.png?,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
 <h3 id="✎问题-2"><a href="#✎问题-2" class="headerlink" title="✎问题"></a>✎问题</h3><p>如果你没能成功的释放，请思考有哪些可能的原因并着手进行解决？</p>
 <p>答：可能没有开启DHCP客户端服务；解决方法：在 “ 运行 ” 中输入 “ <code>sc config DHCP start= AUTO</code> ” 重启后就OK 了</p>
 <h3 id="📬-秘籍-1"><a href="#📬-秘籍-1" class="headerlink" title="📬 秘籍"></a>📬 秘籍</h3><p>在我校不少地方如教室，计算机都采用了 DHCP 来获得网络配置。假如某天因 DHCP 服务器问题从而不能获得网络配置，那么我们可以查看隔壁教室计算机的配置信息来手动进行网络配置，从而使该计算机能够接入 Internet。<br>经常的，在一个固定地方的网络配置我都喜欢采用 静态/手动配置，而不是动态 DHCP 来进行。你能想到是什么原因吗？</p>
 <p>答： IP 有限且主机较多，设置静态配置，避免IP被新接入的主机抢占 。</p>
 <h2 id="netstat"><a href="#netstat" class="headerlink" title="netstat"></a>netstat</h2><blockquote>
-<p>无论是使用 TCP 还是 UDP，任何一个网络服务都与特定的端口（Port Number）关联在一起。因此，每个端口都对应于某个通信协议/服务。<br>netstat（Network Statistics）是在内核中访问网络连接状态及其相关信息的命令行程序，可以显示路由表、实际的网络连接和网络接口设备的状态信息，以及与 IP、TCP、UDP 和 ICMP 协议相关的统计数据，一般用于检验本机各端口的网络服务运行状况</p>
+<p>无论是使用 <code>TCP</code> 还是 <code>UDP</code>，任何一个网络服务都与特定的端口（<code>Port Number</code>）关联在一起。因此，每个端口都对应于某个通信协议/服务。<br><code>netstat</code>（Network Statistics）是在内核中访问网络连接状态及其相关信息的命令行程序，可以显示路由表、实际的网络连接和网络接口设备的状态信息，以及与 <code>IP、TCP、UDP</code> 和 <code>ICMP</code> 协议相关的统计数据，一般用于检验本机各端口的网络服务运行状况</p>
 </blockquote>
 <h3 id="实作一-5"><a href="#实作一-5" class="headerlink" title="实作一"></a>实作一</h3><p>Windows 系统将一些常用的端口与服务记录在 C:\Windows\System32\drivers\etc\services 文件中，请查看该文件了解常用的端口号分配<br><img src="https://img-blog.csdnimg.cn/ee268285a289427db83728e19e615f2b.png?,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
-<h3 id="实作二-3"><a href="#实作二-3" class="headerlink" title="实作二"></a>实作二</h3><p>使用 netstat -an 命令，查看计算机当前的网络连接状况。更多的 netstat 命令选项，可参考上面链接 4 和 5<br><img src="https://img-blog.csdnimg.cn/aa454295eefc45aab21d9419223c3567.png?,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
+<h3 id="实作二-3"><a href="#实作二-3" class="headerlink" title="实作二"></a>实作二</h3><p>使用 <code>netstat -an</code> 命令，查看计算机当前的网络连接状况。更多的<code> netstat</code> 命令选项，可参考上面链接 4 和 5<br><img src="https://img-blog.csdnimg.cn/aa454295eefc45aab21d9419223c3567.png?,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
 <h3 id="📬-秘籍-2"><a href="#📬-秘籍-2" class="headerlink" title="📬 秘籍"></a>📬 秘籍</h3><p>打开的计算机端口，就是向 Internet 打开的一个通道。通过 netstat 命令，我们可以了解当前计算机哪些端口是打开的，从而找出一些恶意后台程序，分析其所作所为，并且可以进一步将相关端口关闭，降低安全风险</p>
 <h2 id="DNS"><a href="#DNS" class="headerlink" title="DNS"></a>DNS</h2><blockquote>
-<p>DNS（Domain Name System）即域名系统，是互联网的一项服务。它作为将域名和 IP 地址相互映射的一个分布式数据库，能够使人更方便地访问互联网。DNS 使用 TCP 和 UDP 的 53 号端口</p>
+<p><code>DNS</code>（Domain Name System）即域名系统，是互联网的一项服务。它作为将域名和 <code>IP</code> 地址相互映射的一个分布式数据库，能够使人更方便地访问互联网。<code>DNS</code> 使用 <code>TCP</code> 和 <code>UDP</code> 的 53 号端口</p>
 </blockquote>
-<h3 id="实作一-6"><a href="#实作一-6" class="headerlink" title="实作一"></a>实作一</h3><p>Windows 系统将一些固定的/静态的 DNS 信息记录在 C:\Windows\System32\drivers\etc\hosts 文件中，如我们常用的 localhost 就对应 127.0.0.1 。请查看该文件看看有什么记录在该文件中<br><img src="https://img-blog.csdnimg.cn/eea88ff50dd7429e93366109ae63e46b.png?,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
+<h3 id="实作一-6"><a href="#实作一-6" class="headerlink" title="实作一"></a>实作一</h3><p>Windows 系统将一些固定的/静态的 DNS 信息记录在 C:\Windows\System32\drivers\etc\hosts 文件中，如我们常用的 localhost 就对应 <code>127.0.0.1</code> 。请查看该文件看看有什么记录在该文件中<br><img src="https://img-blog.csdnimg.cn/eea88ff50dd7429e93366109ae63e46b.png?,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
 <h3 id="实作二-4"><a href="#实作二-4" class="headerlink" title="实作二"></a>实作二</h3><p>解析过的 DNS 记录将会被缓存，以利于加快解析速度。请使用 ipconfig /displaydns 命令查看。我们也可以使用 ipconfig /flushdns 命令来清除所有的 DNS 缓存<br><img src="https://img-blog.csdnimg.cn/895e52c4a244409bb0d7590eddd5e349.png?x-oss-process=im,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
-<h3 id="📬-秘籍-3"><a href="#📬-秘籍-3" class="headerlink" title="📬 秘籍"></a>📬 秘籍</h3><p>当我们使用浏览器上网时，或多或少的会看到一些广告。某些网站的广告是非常没有节操的，所以我们一般可以通过安装浏览器插件如 AdGuard、AdBlocker 等来拦截和过滤。<br>这种方法简单方便有效，不过有一定安全或隐私问题，因为该插件实时知道你访问的 URL。<br>假设不使用这种第三方的插件，希望自己完全控制，那么就请考虑在我们前面提到的 hosts 文件中添加 DNS 记录。有自愿者时时在维护全球正确的 DNS 记录文件 hosts-1 hosts-2</p>
+<h3 id="📬-秘籍-3"><a href="#📬-秘籍-3" class="headerlink" title="📬 秘籍"></a>📬 秘籍</h3><p>当我们使用浏览器上网时，或多或少的会看到一些广告。某些网站的广告是非常没有节操的，所以我们一般可以通过安装浏览器插件如 <code>AdGuard、AdBlocker </code>等来拦截和过滤。<br>这种方法简单方便有效，不过有一定安全或隐私问题，因为该插件实时知道你访问的 <code>URL</code>。<br>假设不使用这种第三方的插件，希望自己完全控制，那么就请考虑在我们前面提到的 <code>hosts</code> 文件中添加 DNS 记录。有自愿者时时在维护全球正确的 DNS 记录文件 <code>hosts-1 hosts-2</code></p>
 <h3 id="✎问题-3"><a href="#✎问题-3" class="headerlink" title="✎问题"></a>✎问题</h3><p>上面秘籍中我们提到了使用插件或自己修改 hosts 文件来屏蔽广告，思考一下这种方式为何能过滤广告？如果某些广告拦截失效，那么是什么原因？你应该怎样进行分析从而能够成功屏蔽它？</p>
-<p>答：通过将 127.0.0.1 广告链接设置为广告推送链接，从而广告链接就不放访问到本机，而是它自己的服务器；广告拦截失效是因为有个跨服务器访问问题；可以使用 adsafe——广告管家 解决这个跨服务器访问的问题</p>
+<p>答：通过将 <code>127.0.0.1 </code>广告链接设置为广告推送链接，从而广告链接就不放访问到本机，而是它自己的服务器；广告拦截失效是因为有个跨服务器访问问题；可以使用 <code>adsafe</code>——广告管家 解决这个跨服务器访问的问题</p>
 <h2 id="cache"><a href="#cache" class="headerlink" title="cache"></a>cache</h2><blockquote>
-<p>cache 即缓存，是 IT 领域一个重要的技术。我们此处提到的 cache 主要是浏览器缓存。<br>浏览器缓存是根据 HTTP 报文的缓存标识进行的，是性能优化中简单高效的一种优化方式了。一个优秀的缓存策略可以缩短网页请求资源的距离，减少延迟，并且由于缓存文件可以重复利用，还可以减少带宽，降低网络负荷</p>
+<p><code>cache </code>即缓存，是 IT 领域一个重要的技术。我们此处提到的 <code>cache</code> 主要是浏览器缓存。<br>浏览器缓存是根据 <code>HTTP 报文</code>的缓存标识进行的，是性能优化中简单高效的一种优化方式了。一个优秀的缓存策略可以缩短网页请求资源的距离，减少延迟，并且由于缓存文件可以重复利用，还可以减少带宽，降低网络负荷</p>
 </blockquote>
-<h3 id="实作一-7"><a href="#实作一-7" class="headerlink" title="实作一"></a>实作一</h3><p>打开 Chrome 或 Firefox 浏览器，访问 <a target="_blank" rel="noopener" href="https://qige.io/">https://qige.io</a> ，接下来敲 F12 键 或 Ctrl + Shift + I 组合键打开开发者工具，选择 Network 面板后刷新页面，你会在开发者工具底部看到加载该页面花费的时间。请进一步查看哪些文件被 cache了，哪些没有<br><img src="https://img-blog.csdnimg.cn/dd81a3fa19154a9cb5f350c6b857a2c9.png?,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
+<h3 id="实作一-7"><a href="#实作一-7" class="headerlink" title="实作一"></a>实作一</h3><p>打开 Chrome 或 Firefox 浏览器，访问 <code>https://qige.io</code> ，接下来敲 <code>F12</code> 键 或 <code>Ctrl + Shift + I</code> 组合键打开开发者工具，选择 Network 面板后刷新页面，你会在开发者工具底部看到加载该页面花费的时间。请进一步查看哪些文件被 <code>cache</code>了，哪些没有<br><img src="https://img-blog.csdnimg.cn/dd81a3fa19154a9cb5f350c6b857a2c9.png?,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
 <h3 id="实作二-5"><a href="#实作二-5" class="headerlink" title="实作二"></a>实作二</h3><p>接下来仍在 Network 面板，选择 Disable cache 选项框，表明当前不使用 cache，页面数据全部来自于 Internet，刷新页面，再次在开发者工具底部查看加载该页面花费的时间。你可比对与有 cache 时的加载速度差异<br><img src="https://img-blog.csdnimg.cn/e370f6a0795a47648cf9593ce0a4de4d.png?,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
 <h3 id="📬-秘籍-4"><a href="#📬-秘籍-4" class="headerlink" title="📬 秘籍"></a>📬 秘籍</h3><p>你的计算机可能还在使用 XX 管家，XX 卫士之类的垃圾软件，那么它可能就会在某些时候提示你计算机的垃圾文件有多少多少，请清理（其实是它本身应该被清理！）之类的弹窗。如果你查看一下它判断的所谓垃圾文件，你会发现大多都是浏览器的缓存，而你已经明白了这些缓存文件的作用。所以，最好是不要清理。</p>
 
@@ -511,11 +511,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂谈</a>
+                <a href="javascript:void(0)" class="js-tag color3">计网</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">计网</a>
+                <a href="javascript:void(0)" class="js-tag color3">杂谈</a>
               </li>
             
             <div class="clearfix"></div>

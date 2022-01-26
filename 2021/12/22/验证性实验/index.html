@@ -6,7 +6,7 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>验证性实验 | 方山子</title>
+  <title>验证性实验 | 方山子</title><meta name="robots" content="noindex">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="ipconfig实作一 ipconfig 是微软操作系统的计算机上用来控制网络连接的一个命令行工具。它的主要用来显示当前网络连接的配置信息（&#x2F;all 参数）">
 <meta property="og:type" content="article">
@@ -34,7 +34,7 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/dd81a3fa19154a9cb5f350c6b857a2c9.png?,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/e370f6a0795a47648cf9593ce0a4de4d.png?,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center">
 <meta property="article:published_time" content="2021-12-22T11:02:20.935Z">
-<meta property="article:modified_time" content="2021-12-24T00:41:44.751Z">
+<meta property="article:modified_time" content="2022-01-26T16:28:55.419Z">
 <meta property="article:author" content="方山子">
 <meta property="article:tag" content="计网">
 <meta name="twitter:card" content="summary">
@@ -272,7 +272,7 @@
 <h3 id="实作一-7"><a href="#实作一-7" class="headerlink" title="实作一"></a>实作一</h3><p>打开 Chrome 或 Firefox 浏览器，访问 <code>https://qige.io</code> ，接下来敲 <code>F12</code> 键 或 <code>Ctrl + Shift + I</code> 组合键打开开发者工具，选择 Network 面板后刷新页面，你会在开发者工具底部看到加载该页面花费的时间。请进一步查看哪些文件被 <code>cache</code>了，哪些没有<br><img src="https://img-blog.csdnimg.cn/dd81a3fa19154a9cb5f350c6b857a2c9.png?,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
 <h3 id="实作二-5"><a href="#实作二-5" class="headerlink" title="实作二"></a>实作二</h3><p>接下来仍在 Network 面板，选择 Disable cache 选项框，表明当前不使用 cache，页面数据全部来自于 Internet，刷新页面，再次在开发者工具底部查看加载该页面花费的时间。你可比对与有 cache 时的加载速度差异<br><img src="https://img-blog.csdnimg.cn/e370f6a0795a47648cf9593ce0a4de4d.png?,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hhcm9uZG93bg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
 <h3 id="📬-秘籍-4"><a href="#📬-秘籍-4" class="headerlink" title="📬 秘籍"></a>📬 秘籍</h3><p>你的计算机可能还在使用 XX 管家，XX 卫士之类的垃圾软件，那么它可能就会在某些时候提示你计算机的垃圾文件有多少多少，请清理（其实是它本身应该被清理！）之类的弹窗。如果你查看一下它判断的所谓垃圾文件，你会发现大多都是浏览器的缓存，而你已经明白了这些缓存文件的作用。所以，最好是不要清理。</p>
-
+<!-- flag of hidden posts -->
           
         
     </div>
@@ -352,25 +352,6 @@
 </article>
 
   
-<nav id="article-nav">
-  
-    <a href="/2021/12/22/Wireshark%E5%AE%9E%E9%AA%8C/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Wireshark 实验
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2021/07/22/%E9%9A%8F%E6%83%B3/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">随想</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -428,7 +409,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2021 方山子
+    		&copy; 2022 方山子
     	</div>
       	<div class="footer-right">
       		<a>方山子</a> 
@@ -509,10 +490,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">计网</a>
-              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">杂谈</a>
